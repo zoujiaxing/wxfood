@@ -1,0 +1,12 @@
+/* pages/address/address.wxss */
+.form-box{
+  padding:0 30rpx;
+}
+.form-box input{
+  height:90rpx;
+  border-bottom:1rpx solid #ededed;
+  color:#999;
+}
+.form-box button{
+  margin-top:30rpx;
+}

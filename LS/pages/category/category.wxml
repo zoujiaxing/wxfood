@@ -1,0 +1,39 @@
+<!--pages/category/category.wxml-->
+<!--pages/category-->
+<view class="main">
+  <!-- 左边 -->
+  <view class="cate-left">
+    <view class="cate-list {{curIndex === index?'on':''}}" wx:for="{{category}}" wx:key="index" 
+    data-id="{{item.id}}" data-index="{{index}}" bindtap='switchTab'>
+      {{item.name}}
+    </view>
+  </view>
+  
+  <!-- 右边内容 -->
+  <scroll-view scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true" class="cate-right">
+    <block wx:for="{{newList}}" wx:for-index wx:key="idx">
+      <view id="{{item.lid}}" class="cate-box">
+        <view class="cate-img">
+          <image src="{{item.img_url}}"></image>
+        </view>
+        <view class="cate-title">
+          <text>{{item.taste}}</text>
+        </view>
+        <!-- 分类产品 -->
+        <view class="cate-product">
+          <view class="cate-newlist" wx:for="{{item.details}}" wx:key="index" wx:for-item="val">
+            <navigator url="../list/list">
+              <image src="{{val.thumbnail}}"></image>
+              <view>
+                <text>{{val.name}} {{val.count}}</text>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+</view>
+
+

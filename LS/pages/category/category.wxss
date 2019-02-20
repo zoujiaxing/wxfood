@@ -1,0 +1,90 @@
+
+/* left */
+page,.main{
+  height:100%;
+}
+.cate-left{
+  float:left;
+  width:150rpx;
+  height:100%;
+  border-right: 1rpx solid #ddd;
+  box-sizing: border-box;
+}
+.cate-left .cate-list{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-left: 3px solid #fff;
+} 
+.cate-left .cate-list.on{
+    color: #AB956D;
+    border-color: #AB956D;
+}
+
+/* right */
+.cate-right{
+  float:right;
+  width:600rpx;
+  height:100%;
+  overflow: hidden;
+}  
+.cate-box{
+  height:100%;
+  padding:40rpx;
+  box-sizing: border-box;
+}
+.cate-box .cate-img image{
+  display: block;
+  width:100%;
+  height:190rpx;
+}
+.cate-box .cate-title{
+  position:relative;
+  height:30rpx;
+  line-height:30rpx;
+  text-align: center;
+  padding:30rpx 0 55rpx;
+  color:#AB956D;
+  font-size:28rpx;
+}
+.cate-right .cate-box .cate-title::before{
+  position:absolute;
+  left:130rpx;
+  top:43rpx;
+  content: '';
+  width:70rpx;
+  height:4rpx;
+  background: #AB956D;
+}
+.cate-right .cate-box .cate-title::after{
+  position:absolute;
+  right:130rpx;
+  top:43rpx; 
+  content: '';
+  width:70rpx;
+  height:4rpx;
+  background: #AB956D;
+}
+/* 产品 */
+.cate-product{
+  display: block;
+} 
+ .cate-newlist{
+  display: inline-block;
+  width:160rpx;
+  height:160rpx;
+  text-align: center; 
+  font-size: 24rpx; 
+  margin:0 20rpx 20rpx 0;
+  
+}
+.cate-product .cate-newlist image{
+  width:80rpx;
+  height:80rpx;
+  margin-bottom: 20rpx;
+}
+.cate-newlist:nth-child(3n){
+    margin-right: 0;
+} 
+  
+

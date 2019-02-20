@@ -1,0 +1,31 @@
+<!--pages/cart/cart.wxml-->
+<view class="main">
+  <view wx:if="{{hasList}}">
+    <view class="cart-box">
+        <view class="cart-list" wx:for="{{carts}}" wx:key="{{index}}">
+          <icon class="cart-select" wx:if="{{item.selected}}" 
+          type="success" color="red" />
+          <icon class="cart-select" wx:else type="circle" />
+          <navigator url="../details/details?id={{item.id}}">
+            <image src="{{item.image}}"></image>
+          </navigator>
+          <text class="cart-title">{{item.title}}</text>
+          <text class="cart-price">￥ {{item.price}}</text>
+          <view class="cart-var">
+            <text>-</text>
+            <text>{{item.num}}</text>
+            <text>+</text>
+          </view>
+          <text class="cart-del">x</text>
+
+        </view>
+    </view>
+
+    <view></view>
+  </view>
+
+  <!-- 购物车为空 -->
+  <view wx:else>
+    <view>购物车是空哒！</view>
+  </view>
+</view>

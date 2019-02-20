@@ -1,0 +1,76 @@
+/* pages/search/search.wxss */
+/*  */
+.main{
+  padding:0 20rpx;
+}
+.search-box{
+  position:relative;
+  display:flex;
+  justify-content: space-between;
+  padding-top:26rpx;
+}
+.search-box input{
+  flex:1;
+  height:60rpx;
+  line-height:60rpx;
+  border:1px solid #ddd;
+  border-radius: 10rpx;
+  padding:0 20rpx 0 54rpx;
+  background: #f8f8f8;
+  font-size:32rpx;
+}
+.search-box icon{
+  position: absolute;
+  left:15rpx;
+  top:44rpx;
+  width:35rpx;
+  height:35rpx;
+}
+
+/**/
+.search{
+  height:90rpx;
+  line-height: 90rpx;  
+}
+.search text{
+  font-size:35rpx;
+  color:#AB956D;
+  padding:10rpx 0;
+  border-bottom: 8rpx solid #AB956D;
+}
+.search-name{
+  margin-top:8rpx;
+}
+.search-name text{
+  display: inline-block;
+  font-size: 28rpx;
+  padding: 6rpx 20rpx;
+  border: 2rpx solid #ddd;
+  color: #aaa;
+  margin: 0 30rpx 20rpx 0;
+  border-radius: 40rpx;
+  word-break: break-all;
+}
+.title{
+  height:90rpx;
+  line-height: 90rpx;
+}
+.title text{
+  font-size:35rpx;
+  color:#AB956D;
+  padding:10rpx 0;
+  border-bottom: 8rpx solid #AB956D;
+}
+.name{
+  margin-top:8rpx;
+}
+.name text{
+  display: inline-block;
+  font-size: 28rpx;
+  padding: 6rpx 20rpx;
+  border: 2rpx solid #ddd;
+  color: #aaa;
+  margin: 0 30rpx 20rpx 0;
+  border-radius: 40rpx;
+  word-break: break-all;
+}

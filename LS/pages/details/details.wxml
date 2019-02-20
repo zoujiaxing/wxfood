@@ -1,0 +1,43 @@
+<!--pages/details/details.wxml-->
+<view class="main">
+  <view class="detail-top">
+    <image class="detail-img" src="{{goods.img_url}}"></image>
+
+    <navigator open-type="switchTab" url="../cart/cart">
+    <!--scaleCart：当选中或按下下面的购物车时，这里的购物车会变大scale:缩放  -->
+      <view class="cart-icon {{scaleCart?'on':''}}">
+        <image src="../assets/images/cart2.png"></image>
+        <text class="icon-num" wx:if="{{hasCarts}}">{{totalNum}}</text>
+      </view>
+    </navigator>
+
+    <view class="good-add">
+      <text>数量 {{num}}</text>
+      <text bindtap='addCount'>+</text>
+      <text bindtap='addToCart'>加入购物车</text>
+      <image bindtap='addToCart' class="good-img" 
+      src="../assets/images/cart1.png">
+      </image>
+    </view>
+    <!-- 点击购物车放大的图片图,平时隐藏 -->
+    <image src="../assets/images/cart1.png" wx:if="{{show}}"></image>
+    <view class="stock">{{goods.stock}}</view>
+    <view class="title">{{goods.title}}</view>
+    <view class="price">￥ {{goods.price}}</view>
+  </view>
+
+  <view class="detail-bottom">
+    <view class="detail-nav {{curIndex === 0 ?'on':''}}" 
+    bindtap='handlePress' data-index="0">商品详情</view>
+    <view class="detail-nav {{curIndex === 1 ?'on':''}}"  
+    bindtap='handlePress' data-index="1">产品参数</view>
+    <view class="detail-nav {{curIndex === 2 ?'on':''}}"
+     bindtap='handlePress' data-index="2">售后保障</view>
+    <view class="content">
+      <view wx:if="{{curIndex === 0}}">{{goods.detail}}</view>
+      <view wx:if="{{curIndex === 1}}">{{goods.parameter}}</view>
+      <view wx:if="{{curIndex === 2}}">{{goods.service}}</view>
+    </view>
+  </view>
+</view>
+

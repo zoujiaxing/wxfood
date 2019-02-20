@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view class="main">
+  <view class="search-box">
+    <input placeholder='搜索'></input>
+    <icon type="search" size='14'></icon>
+  </view>
+
+  <view>
+    <view class="search">
+      <text>搜索记录</text>
+    </view>
+    <view class="search-name">
+      <text>湖南冰糖橙</text>
+      <text>海南莲雾</text>
+    </view>
+  </view>
+
+  <view>
+    <view class="title">
+      <text>热点推荐</text>
+    </view>
+    <view class="name">
+      <text>新鲜芹菜</text>
+      <text>大红枣</text>
+      <text>滋补桂圆干</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/user/user.wxml-->
+<view class="main">
+  <!--header  -->
+  <view class="header">
+    <image src="{{thumb}}"></image>
+    <text>{{nickname}}</text>
+    <text>关于我们</text>
+  </view>
+  <!--address-box-->
+  <view class="address-box">
+    <view class="address-msg">
+      <navigator url="../address/address">地址管理</navigator>
+    </view>
+    <view wx:if="{{hasAddress}}" class="address-list">
+      <view>{{address.name}}</view>
+      <view>{{address.phone}}</view>
+      <view>{{address.detail}}</view>
+    </view>
+  </view>
+  <!--order-box-->
+  <view class="order-box">
+    <view class="order">我的订单</view>
+    <view class="order-list" wx:for="{{orders}}" wx:key="index">
+      <view class="order-title">订单编号：{{item.number}}</view>
+      <view class="order-thumb">
+        <image src="../assets/images/c2.png"></image>
+        <view>{{item.name}}</view>
+        <view>{{item.count}}</view>
+        <text>{{item.status}}</text>
+      </view>
+      <view class="order-pay">
+        <text>实付：￥{{item.money}}</text>
+        <button size="mini" class="btn" bindtap='handJump'>支付</button>
+      </view>
+    </view>
+  </view>
+</view>
